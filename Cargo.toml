@@ -1,0 +1,10 @@
+[package]
+name = "OJNMReader"
+version = "0.1.0"
+authors = ["Chu Chin Kuan <keigen.shu@gmail.com>"]
+
+[dependencies]
+sfml = "*"
+
+[dependencies.xor]
+git = "https://github.com/zummenix/xor-rs/"
