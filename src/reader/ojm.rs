@@ -83,6 +83,8 @@ pub fn parse_m30(meta: &Metadata, file: &mut File) {
             32 => self::xor::xor(&m30data, &M30_0412_XORMASK),
             _  => m30data
         };
+        
+        // TODO Use SoundBuffer::new_from_memory when rust-sfml finally includes it
         let mut music = Music::new_from_memory(&oggdata).unwrap();
 
         println!("loaded {:}:{:} - {:} size {:}", m30head.side, m30head.id, name, m30head.size);
